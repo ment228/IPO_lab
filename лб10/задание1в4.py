@@ -11,8 +11,8 @@ for i in range(N):#цикл для i до N
     numbers.append(number)#добавляет числа в список
 with open("file1_NN.txt", "w") as file:#открываем файл для записи
     for number in numbers:#
-        file.write(str(number) + "\n")#Запишем информацию в файл hello.txt
+        file.write(str(number))#Запишем информацию в файл hello.txt
 with open("file2_NN.txt", "w") as file:#открываем файл для записи
     for number in numbers:#
         if number % 2 != 0:#
-            file.write(str(number) + "\n")#нечетные числа Запишем информацию в файл hello.txt
+            file.write(str(number))#нечетные числа Запишем информацию в файл hello.txt

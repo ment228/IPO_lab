@@ -19,34 +19,33 @@ class Graj:#новый класс
     nation: национальность гражданина
 
     Методы:
-    change_address(new_address): изменяет адрес проживания
-    get_full_name(): возвращает полное имя гражданина
-    is_adult(): проверяет, является ли гражданин совершеннолетним
-    change_passport_number(new_passport_number): изменяет номер паспорта
+    change_address: изменяет адрес проживания
+    get_full_name: возвращает полное имя гражданина
+    is_adult: проверяет, является ли гражданин совершеннолетним
+    change_passport_number: изменяет номер паспорта
     """
     def __str__(self):
-        """Возвращает строковое представление самолета."""
         return f'имя: {self.name},' \
                f'возраст: {self.age}, адрес: {self.address}, ' \
                f'пол: {self.gender}, национальность: {self.nation}, ' \
-               f'номер паспорта: {self.passport_number}'
+               f'номер паспорта: {self.passportNumber}'#возвращает строковое представление граждан
 
     def __init__(self, name, age, gender, passportNumber, address, nation):#конструктор с параметрами name, age, gender, passportNumber, address, nation
         self.name = name
         self.age = age
         self.gender = gender
-        self.passport_number = passportNumber
+        self.passportNumber = passportNumber
         self.address = address
         self.nation = nation#инициализируем каждый параметр
-    def change_address(self, new_address):
-        self.address = new_address
-    def get_full_name(self):
-        return self.name
-    def is_adult(self):
-        return self.age >= 18
-    def change_passport_number(self, new_passport_number):
-        self.passport_number = new_passport_number
-print(Graj.__doc__)#вывод документации класса
+    def address(self, new_address):
+        self.address = new_address#возвращает адрес
+    def Name(self):
+        return self.name#возвращает имя
+    def Age(self):
+        return self.age >= 18#возвращает возраст от 18 лет
+    def passportNum(self, passportNumber):
+        self.passportNumber = passportNumber#устанавливает номер паспорта
+print(Graj.__doc__)#вывод документации класса граждане
 graj1 = Graj("Емельянович Арсений", 25, "Мужской", "634634634", "ул.Борунская,д.незнаю", "белорус")
 graj2 = Graj("Побединский Архип", 30, "Мужской", "65475646", "новошишки,д.нездаю", "белорус")
 graj3 = Graj("Иван Мишенков", 40, "Мужской", "654645646", "г.Ошмяны,ул.Западная,д.5", "белорус")
@@ -57,4 +56,4 @@ print(graj1)
 print(graj2)
 print(graj3)
 print(graj4)
-print(graj5)
+print(graj5)#вывод информации всех граждан
